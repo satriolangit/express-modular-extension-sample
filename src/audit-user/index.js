@@ -130,7 +130,7 @@ export default {
       schedule: "*/5 * * * *",
       owner: "audit-user",
       handler: () => {
-        logger.info("[audit-user] flushed buffer", { count: rowCount });
+        logger.info("[audit-user] flushed buffer");
       },
     });
   },
