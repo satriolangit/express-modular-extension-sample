@@ -1,8 +1,8 @@
-const userServiceBase = require("../../features/user-management/services/service.user");
-const helperService = require("./service.helper");
-const mw = require("./middleware.extend");
+import userServiceBase from "../../features/user-management/services/service.user.js";
+import helperService from "./service.helper.js";
+import mw from "./middleware.extend.js";
 
-module.exports = function extendUser(r) {
+export default function extendUser(r) {
   // Replace GET /users/:id — auth + logger + rateLimit + handler baru
   r.get("/:id", mw.auth, mw.requestLogger, mw.rateLimit, async (req, res) => {
     try {
@@ -17,4 +17,4 @@ module.exports = function extendUser(r) {
   r.delete("/:id", mw.auth, mw.requireRole("admin"), async (req, res) => {
     res.json({ deleted: req.params.id, by: req.user.name });
   });
-};
+}

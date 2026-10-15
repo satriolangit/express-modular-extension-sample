@@ -1,4 +1,4 @@
-module.exports = async function initUserExt(deps) {
+export default async function initUserExt(deps) {
   const { nats, ws, logger } = deps;
 
   logger.info("[user-management.ext] init");
@@ -44,7 +44,7 @@ module.exports = async function initUserExt(deps) {
   //   schedule: "*/15 * * * *", // every 15 minutes
   //   owner: "user-management.ext",
   //   handler: async () => {
-  //     const { db } = require("../../libs/deps");
+  //     const { db } = await import("../../libs/deps.js");
   //     const { rows } = await db.query(
   //       "SELECT * FROM audit_logs WHERE synced = false LIMIT 100",
   //     );
@@ -54,4 +54,4 @@ module.exports = async function initUserExt(deps) {
   //     logger.info("[user-management.ext] audit sync", { count: rows.length });
   //   },
   // });
-};
+}

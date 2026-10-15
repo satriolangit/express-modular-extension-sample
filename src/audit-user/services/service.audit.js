@@ -1,6 +1,6 @@
-const { v4: uuidv4 } = require("uuid");
-const auditRepo = require("../repositories/repo.audit");
-const { logger } = require("../../../libs/deps");
+import { v4 as uuidv4 } from "uuid";
+import auditRepo from "../repositories/repo.audit.js";
+import { logger } from "../../../libs/deps.js";
 
 async function byUser(userId) {
   logger.debug("service.audit.byUser", userId);
@@ -17,4 +17,4 @@ async function record(payload) {
   return auditRepo.insert(entry);
 }
 
-module.exports = { byUser, list, record };
+export default { byUser, list, record };

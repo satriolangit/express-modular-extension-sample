@@ -3,9 +3,9 @@
 //     .. → extensions/
 //     ../.. → src/
 //     ../../libs/... → src/libs/...
-const { logger } = require("../../libs/deps");
+import { logger } from "../../libs/deps.js";
 
-module.exports = {
+export default {
   prefix: "/audit",
 
   async init(deps) {

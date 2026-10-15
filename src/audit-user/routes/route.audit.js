@@ -1,8 +1,8 @@
 // extensions/audit-user/routes/route.audit.js
-const service = require("../services/service.audit");
-const { logger, nats, ws } = require("../../../libs/deps");
+import service from "../services/service.audit.js";
+import { logger, nats, ws } from "../../../libs/deps.js";
 
-module.exports = function registerAudit(r) {
+export default function registerAudit(r) {
   // ─── GET /audit/logs ────────────────────────────────
   r.get("/logs", async (req, res) => {
     try {
@@ -54,4 +54,4 @@ module.exports = function registerAudit(r) {
     });
     res.json({ ok: true, sent: count });
   });
-};
+}

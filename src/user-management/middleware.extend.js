@@ -1,6 +1,6 @@
-const { logger } = require("../../libs/deps");
+import { logger } from "../../libs/deps.js";
 
-module.exports = {
+export default {
   // ── Auth ─────────────────────────────────────
   auth: (req, res, next) => {
     // POC: hardcoded user. Real: verify JWT / session

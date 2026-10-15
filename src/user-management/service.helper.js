@@ -1,6 +1,6 @@
-const userRepoBase = require("../../features/user-management/repositories/repo.user");
-const roleRepoBase = require("../../features/user-management/repositories/repo.role");
-const { logger } = require("../../libs/deps");
+import userRepoBase from "../../features/user-management/repositories/repo.user.js";
+import roleRepoBase from "../../features/user-management/repositories/repo.role.js";
+import { logger } from "../../libs/deps.js";
 
 async function enrich(user) {
   logger.debug("service.helper.enrich", user.id);
@@ -13,4 +13,4 @@ async function summary(user) {
   return { id: user.id, name: user.name, roleCount: roles.length };
 }
 
-module.exports = { enrich, summary };
+export default { enrich, summary };
