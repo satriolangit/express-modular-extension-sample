@@ -1,5 +1,5 @@
-import userRepoBase from "../../features/user-management/repositories/repo.user.js";
-import roleRepoBase from "../../features/user-management/repositories/repo.role.js";
+import userRepoBase from "../../modules/user-management/repositories/repo.user.js";
+import roleRepoBase from "../../modules/user-management/repositories/repo.role.js";
 import { logger } from "../../libs/deps.js";
 
 async function enrich(user) {

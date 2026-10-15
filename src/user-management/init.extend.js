@@ -31,7 +31,7 @@ export default async function initUserExt(deps) {
     (socket, req) => {
       logger.info("[user-management.ext] ws connected");
       socket.send(
-        JSON.stringify({ source: "extension", feature: "user-management" }),
+        JSON.stringify({ source: "extension", module: "user-management" }),
       );
     },
     { owner: "user-management.ext" },

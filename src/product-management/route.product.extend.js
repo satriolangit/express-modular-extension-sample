@@ -1,4 +1,4 @@
-import productServiceBase from "../../features/product-management/services/service.product.js";
+import productServiceBase from "../../modules/product-management/services/service.product.js";
 import mw from "../user-management/middleware.extend.js";
 
 export default function extendProduct(r) {

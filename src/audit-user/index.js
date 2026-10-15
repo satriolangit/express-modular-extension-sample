@@ -88,7 +88,7 @@ export default {
         });
 
         // Kirim sapaan
-        socket.send(JSON.stringify({ type: "welcome", feature: "audit-user" }));
+        socket.send(JSON.stringify({ type: "welcome", module: "audit-user" }));
 
         // Handle pesan dari client
         socket.on("message", (raw) => {

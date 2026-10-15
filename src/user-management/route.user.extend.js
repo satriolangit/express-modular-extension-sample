@@ -1,4 +1,4 @@
-import userServiceBase from "../../features/user-management/services/service.user.js";
+import userServiceBase from "../../modules/user-management/services/service.user.js";
 import helperService from "./service.helper.js";
 import mw from "./middleware.extend.js";
 
