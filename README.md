@@ -1,5 +1,7 @@
 # extension-api — Kustomisasi untuk base-api
 
+> **Bahasa Indonesia | [English](README.en.md)**
+
 Repo ini berisi **kustomisasi klien** untuk [base-api](../express-modular-sample/README.md). Bukan aplikasi yang berjalan sendiri: isinya disalin ke `base-api/src/extensions/` saat build (`npm run poc:copy`), lalu dikomposisi dengan module inti.
 
 - **Runtime:** ESM (`"type": "module"`) — Node.js ≥ 20.11
